@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dario Construction specializes in premium hardwood stair installation and interior finishing in the Greater Toronto Area (GTA) and Burlington. Clean, precise, and built solid. Call for a free consultation.">
+    <meta name="keywords" content="Hardwood stair installation, finish carpentry, interior finishing, GTA contractor, Toronto renovation, stairs Burlington, Dario Construction">
+    <meta name="author" content="Dario Construction">
+    <title>Dario Construction | Premium Stair Installation & Interior Finishing in the GTA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for Branding */
+        :root {
+            --primary-blue: #1F4A75;
+            --secondary-blue: #3474B5;
+            --hardwood-accent: #B07C4F;
+            --dark-gray: #2B2B2B;
+            --light-gray: #F4F6F8;
+            --white: #FFFFFF;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-accent {
+            background-color: var(--hardwood-accent);
+            color: var(--white);
+            border: 2px solid var(--hardwood-accent);
+        }
+
+        .btn-accent:hover {
+            background-color: transparent;
+            color: var(--hardwood-accent);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        /* Stylized CSS Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--primary-blue) 50%, var(--secondary-blue) 50%);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            position: relative;
+        }
+        
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 40%;
+            background-color: var(--hardwood-accent);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            font-size: 0.8rem;
+            color: var(--hardwood-accent);
+            display: block;
+            margin-top: -5px;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-blue);
+        }
+
+        .contact-phone {
+            font-weight: 600;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Mobile Menu Toggle (Hidden on Desktop) */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(31, 74, 117, 0.85), rgba(31, 74, 117, 0.85)), url('https://images.unsplash.com/photo-1600566753086-00f18efc2291?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--light-gray);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* Philosophy / Banner Section */
+        .philosophy {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+        }
+
+        .philosophy span {
+            color: var(--hardwood-accent);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .section-header p {
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            height: 200px;
+            background-color: #ddd; /* Fallback */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-stairs { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        .img-finish { background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        .img-custom { background-image: url('https://images.unsplash.com/photo-1581428982868-e410dd447aa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        /* Portfolio / About Section */
+        .about {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--hardwood-accent);
+            font-weight: bold;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .about-images img {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .about-images img:first-child {
+            grid-column: 1 / -1;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--light-gray);
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .info-icon {
+            background-color: var(--secondary-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            color: var(--dark-gray);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: var(--font-body);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #11263C;
+            color: #A0B0C0;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--hardwood-accent);
+        }
+
+        /* Mobile Optimization (Media Queries) */
+        @media (max-width: 992px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .contact-phone {
+                display: none; /* Hide standard nav on mobile */
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .philosophy {
+                font-size: 1.2rem;
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h1>Dario</h1>
+                    <span>CONSTRUCTION</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="contact-phone">
+                📞 647-657-3816
+            </div>
+
+            <div class="menu-toggle">☰</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Master Stair & Finish Carpenters in the GTA</h2>
+            <p>Started from rough cuts and dusty steps, now it's clean, sharp, and built solid. Precision hardwood stairs and interior finishing you can feel.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-accent">Get a Free Consultation</a>
+                <a href="#services" class="btn btn-primary">See Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="philosophy">
+        "Clean lines <span>–</span> sharp finish <span>–</span> precise to every millimeter."
+    </div>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Expertise</h2>
+                <p>Specializing in high-end carpentry for homes in Burlington and across the Greater Toronto Area. No shortcuts, just real work.</p>
+            </div>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-image img-stairs"></div>
+                    <div class="service-content">
+                        <h3>Hardwood Stair Installation</h3>
+                        <p>From stringers to the final tread, we build solid, squeak-free hardwood stairs that act as the centerpiece of your home.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image img-finish"></div>
+                    <div class="service-content">
+                        <h3>Interior Finishing</h3>
+                        <p>Flawless baseboards, casing, crown molding, and trim work. We ensure every joint is seamless and every line is perfectly sharp.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image img-custom"></div>
+                    <div class="service-content">
+                        <h3>Railing & Baluster Systems</h3>
+                        <p>Custom handrails, wood or iron balusters, and newel posts securely installed to elevate the safety and style of your staircase.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about container">
+        <div class="about-text">
+            <h2>If you build it, it has to be solid.</h2>
+            <p>At Dario Construction, we believe that you don't just walk on stairs—you feel the quality. Serving the GTA and Burlington areas, we are dedicated to the craft of stair building and finish carpentry.</p>
+            <p>Every detail is measured, every line is on point. We take your project from rough cuts to a sharp, refined finish.</p>
+            
+            <ul class="check-list">
+                <li>Clean, Precise Workmanship</li>
+                <li>Specialized Stair & Finish Carpenters</li>
+                <li>Serving Burlington & the GTA</li>
+                <li>Free Consultations & Quotes</li>
+            </ul>
+            
+            <a href="https://instagram.com/dariocontruction" target="_blank" class="btn btn-primary" style="margin-top: 15px;">View Our Instagram Portfolio</a>
+        </div>
+        <div class="about-images">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Finished Hardwood Stairs">
+            <img src="https://images.unsplash.com/photo-1604505199677-2e11894a4c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Carpentry Tools">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Interior House Details">
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>Ready for a sharp finish?</h2>
+                <p>Message us today for a free consultation. Whether you are in Burlington, Toronto, or anywhere in the GTA, we are ready to bring precision to your next project.</p>
+                
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <strong>Call or Text Us</strong><br>
+                        647-657-3816
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <strong>Service Area</strong><br>
+                        Burlington & Greater Toronto Area (GTA)
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div>
+                        <strong>Instagram</strong><br>
+                        @dariocontruction
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('In a live environment, this would send an email to Dario Construction!');">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Details</label>
+                        <textarea id="project" name="project" required placeholder="Tell us about your stairs or interior finishing needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-accent submit-btn">Request Free Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dario Construction. All Rights Reserved.</p>
+            <p>Stair & Finish Carpenter | GTA Area</p>
+            <div class="social-links">
+                <a href="https://instagram.com/dariocontruction" target="_blank" aria-label="Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
