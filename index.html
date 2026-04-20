@@ -3,369 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dario Construction | GTA's Premier Stair & Finish Carpenters. Craftsmanship that elevates your View. Built for Toronto Life.">
+    <meta name="description" content="Dario Construction | GTA's Premier Stair & Finish Carpenters. Specializing in hardwood stair installation and high-end interior finishing in Toronto and Burlington.">
+    <meta name="keywords" content="Hardwood stairs, finish carpentry, Toronto contractors, GTA renovations, Burlington stairs, Dario Construction">
     <title>Dario Construction | GTA Stair & Finish Carpenters</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playball&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+    
     <style>
-        /* Color Palette and Global Styles */
+        /* CSS Variables - Using the new Logo's Palette */
         :root {
             --navy-blue: #102C57;
             --gold: #C1A062;
             --white: #ffffff;
-            --light-gray: #f5f5f5;
-            --gray-text: #666666;
-            --dark-charcoal: #333333;
-            --script-font: 'Playball', cursive;
-            --body-font: 'Montserrat', sans-serif;
+            --light-gray: #f4f6f8;
+            --dark-gray: #333333;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --font-accent: 'Playball', cursive;
+        }
+
+        /* --- Base & Mobile-First Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            font-family: var(--body-font);
-            color: var(--navy-blue);
+            font-family: var(--font-body);
+            color: var(--dark-gray);
             background-color: var(--white);
             line-height: 1.6;
         }
 
         h1, h2, h3, h4 {
-            font-family: var(--body-font);
-            font-weight: 700;
-        }
-
-        p {
-            color: var(--gray-text);
+            font-family: var(--font-heading);
+            color: var(--navy-blue);
+            line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
         a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.3s ease;
         }
 
         .container {
-            width: 90%;
-            max-width: 1400px;
+            width: 100%;
+            padding: 0 20px;
             margin: 0 auto;
-            padding: 0 15px;
         }
 
-        /* Desktop Header */
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--white);
+            padding: 12px 28px;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            border-radius: 4px;
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        /* Header & Nav */
         header {
             background-color: var(--white);
-            border-bottom: 1px solid var(--light-gray);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .header-top-bar {
-            background-color: var(--light-gray);
-            font-size: 14px;
-            padding: 10px 0;
+        .top-bar {
+            display: none; /* Hidden on mobile */
         }
 
-        .header-top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            color: var(--navy-blue);
-        }
-
-        .header-main {
-            padding: 15px 0;
-        }
-
-        .header-main .container {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 20px;
         }
 
-        /* Self-contained CSS and Text Logo Recreation */
-        .logo-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
+        /* The Logo Image Integration */
+        .logo-img {
+            height: 70px; /* Mobile size */
+            width: auto;
+            display: block;
+        }
+
+        .menu-toggle {
+            font-size: 28px;
+            color: var(--navy-blue);
+            cursor: pointer;
+            display: block;
+            background: none;
+            border: none;
+        }
+
+        .nav-links {
+            display: none; /* Hidden on mobile initially */
+            width: 100%;
             background-color: var(--white);
-            border: 5px solid var(--navy-blue);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 20px;
-            letter-spacing: 1px;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        /* Simplified SVG Tools and CN Tower within the circular logo (best attempt) */
-        .logo-circle::before {
-            content: '';
             position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23102C57' d='M50 0 L50 20 L55 25 L55 35 L50 40 L50 100 L45 100 L45 40 L40 35 L40 25 L45 20 L45 0 Z'/%3E%3C!-- Tools and house placeholder --%3E%3Ccircle cx='50' cy='50' r='5' fill='%23102C57'/%3E%3C/svg%3E");
-            background-size: contain;
-            background-repeat: no-repeat;
+            top: 100%;
+            left: 0;
+            flex-direction: column;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .logo-text-top {
-            color: var(--navy-blue);
-            margin-bottom: -5px;
-            margin-top: 40px; /* Space for the graphics */
+        .nav-links.active {
+            display: flex; /* Shown when toggled via JS */
         }
 
-        .logo-text-bottom {
-            color: var(--gold);
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .nav {
+        .nav-links li {
             list-style: none;
-            display: flex;
-            gap: 25px;
-            text-transform: uppercase;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 15px;
+            font-family: var(--font-heading);
             font-weight: 600;
             font-size: 14px;
+            color: var(--navy-blue);
         }
 
-        .nav li a:hover {
+        .nav-links a:hover {
             color: var(--gold);
         }
 
-        /* Desktop Hero */
+        /* Hero Section */
         .hero {
-            position: relative;
-            background-color: #000; /* Placeholder if image doesn't load */
+            /* Placeholder Toronto skyline image, darkened for text legibility */
+            background: linear-gradient(rgba(16, 44, 87, 0.8), rgba(16, 44, 87, 0.8)), url('https://images.unsplash.com/photo-1503891450247-ee5f8ec46dc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
             color: var(--white);
-            padding: 100px 0;
+            padding: 80px 20px;
             text-align: center;
-            background-image: url('data:image/jpeg;base64,...(placeholder data)...'); /* Placeholder for Toronto skyline through banister */
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--light-gray);
+        }
+
+        /* Accent Ribbon */
+        .accent-ribbon {
+            background-color: var(--light-gray);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .accent-ribbon p {
+            font-family: var(--font-accent);
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 0;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 1 col on mobile */
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .service-img {
+            height: 200px;
             background-size: cover;
             background-position: center;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4); /* Overlay to make text readable */
-        }
+        /* Using professional carpentry placeholders */
+        .img-1 { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+        .img-2 { background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+        .img-3 { background-image: url('https://images.unsplash.com/photo-1581428982868-e410dd447aa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
 
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: var(--light-gray);
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--white);
-            color: var(--dark-charcoal);
-            padding: 15px 40px;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 14px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: var(--light-gray);
-        }
-
-        /* Artisan Section */
-        .artisan {
+        .service-content {
+            padding: 25px;
             text-align: center;
-            padding: 60px 0;
-            font-family: var(--script-font);
-            font-size: 32px;
-            color: var(--navy-blue);
         }
 
-        /* Feature Columns Section */
-        .features {
-            padding: 60px 0;
-            background-color: var(--light-gray);
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .feature-item {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Placeholder images for features */
-        .feature-img {
-            width: 100%;
-            height: 200px;
-            background-color: #ddd;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #888;
-        }
-
-        .feature-label {
-            display: inline-block;
-            background-color: var(--navy-blue);
-            color: var(--white);
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin-bottom: 15px;
-        }
-
-        /* Match the mockup specific annotation text blocks */
-        .annotation {
-            background-color: rgba(255, 255, 255, 0.9);
-            border: 1px solid var(--gold);
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 20px;
-            position: absolute;
-            z-index: 2;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        /* Positioning the annotation text blocks */
-        .feature-grid .feature-item:nth-child(2) .annotation {
-            bottom: 20px; left: 20px;
-        }
-        .feature-grid .feature-item:nth-child(3) .annotation {
-            top: 20px; right: 20px;
-        }
-
-        .annotation-text {
-            color: var(--navy-blue);
-        }
-
-        /* Footer/Contact Info (Combining Mobile screen content) */
+        /* Contact & Footer */
         footer {
             background-color: var(--navy-blue);
             color: var(--white);
-            padding: 60px 0;
+            padding: 60px 0 20px;
             text-align: center;
-            font-size: 14px;
         }
 
-        footer a {
-            color: var(--light-gray);
+        footer h2 {
+            color: var(--white);
         }
 
-        .footer-instagram {
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 10px;
-            margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.05);
+        .contact-info {
+            margin-bottom: 40px;
         }
 
-        /* Mobile Layout */
-        @media (max-width: 900px) {
-            /* Mobile Header */
-            .header-top-bar {
-                display: none;
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: var(--gold);
+        }
+
+        .ig-box {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 300px;
+            margin: 0 auto 30px;
+        }
+
+        .ig-box h3 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        /* --- Desktop Optimization (Media Queries) --- */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1200px;
             }
 
-            .header-main .container {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+            /* Desktop Top Bar */
+            .top-bar {
+                display: block;
+                background-color: var(--navy-blue);
+                color: var(--white);
+                padding: 10px 0;
+                font-size: 14px;
             }
 
-            .header-main .logo-circle {
-                width: 90px;
-                height: 90px;
-                font-size: 16px;
-                margin-top: -30px; /* Pull it up to sit on the header line */
+            .top-bar .container {
+                display: flex;
+                justify-content: space-between;
             }
 
-            .logo-circle::before {
-                width: 45px;
-                height: 45px;
-                top: 15%;
+            /* Desktop Header */
+            .nav-container {
+                padding: 15px 20px;
             }
 
-            .logo-text-top {
-                margin-top: 30px;
+            .logo-img {
+                height: 100px; /* Larger logo on desktop */
             }
 
-            .nav {
-                display: none; /* Hide desktop nav and implement hamburger icon */
+            .menu-toggle {
+                display: none; /* Hide hamburger */
             }
 
-            /* Implementation of simple hamburger menu icon */
-            .header-main::after {
-                content: '☰';
-                position: absolute;
-                top: 25px;
-                right: 25px;
-                font-size: 28px;
-                cursor: pointer;
-                color: var(--navy-blue);
+            .nav-links {
+                display: flex;
+                position: static;
+                width: auto;
+                flex-direction: row;
+                gap: 30px;
+                box-shadow: none;
+                border: none;
             }
 
-            /* Mobile Hero */
+            .nav-links li {
+                border: none;
+            }
+
+            .nav-links a {
+                padding: 0;
+            }
+
+            /* Desktop Hero */
             .hero {
-                padding: 60px 0;
+                padding: 140px 20px;
             }
-            
+
             .hero h1 {
-                font-size: 28px;
+                font-size: 3.5rem;
+                max-width: 900px;
+                margin: 0 auto 20px;
             }
 
             .hero p {
-                font-size: 16px;
+                font-size: 1.3rem;
             }
 
-            /* Mobile Artisan Section */
-            .artisan {
-                font-size: 24px;
-                padding: 40px 0;
+            .accent-ribbon p {
+                font-size: 2.8rem;
             }
 
-            /* Mobile Feature Columns */
-            .feature-grid {
-                grid-template-columns: 1fr;
+            /* Desktop Services */
+            .service-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop */
             }
 
-            .feature-item {
-                transform: none;
+            /* Desktop Footer */
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                text-align: left;
+                align-items: center;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .ig-box {
+                margin: 0;
             }
         }
     </style>
@@ -373,92 +372,107 @@
 <body>
 
     <header>
-        <div class="header-top-bar">
+        <div class="top-bar">
             <div class="container">
-                <div>Phone: 647-657-3816</div>
-                <div>Mobile First | Sky Silver | Cool Charcoal</div>
+                <div>Serving Burlington & the Greater Toronto Area</div>
+                <div>Call us today: <a href="tel:6476573816" style="color: var(--gold);">647-657-3816</a></div>
             </div>
         </div>
-        <div class="header-main">
-            <div class="container">
-                <a href="#" class="logo-circle">
-                    <span class="logo-text-top">Dario</span>
-                    <span class="logo-text-bottom">CONSTRUCTION</span>
-                </a>
-                <ul class="nav">
-                    <li><a href="#services">SERVICES</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#process">PROCESS</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
+        <div class="container nav-container">
+            <a href="#">
+                <img src="logo.png" alt="Dario Construction Logo" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>DARIO CONSTRUCTION | GTA'S PREMIER STAIR & FINISH CARPENTERS</h1>
-            <p>Craftsmanship that elevates your View. Built for Toronto Life.</p>
-            <a href="#get-a-quote" class="btn">GET A FREE QUOTE</a>
+            <h1>Craftsmanship that Elevates Your View</h1>
+            <p>GTA's Premier Stair & Finish Carpenters. Built solid for Toronto Life.</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
         </div>
     </section>
 
-    <section class="artisan">
-        <div class="container">
-            Stay artisan, High-Quality
-        </div>
-    </section>
+    <div class="accent-ribbon">
+        <p>Stay artisan, High-Quality.</p>
+    </div>
 
-    <section id="services" class="features">
-        <div class="container">
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="feature-img">Staircase</div>
-                    <span class="feature-label">Staircases</span>
+    <section id="services" class="services container">
+        <div class="section-header">
+            <h2>Our Expertise</h2>
+            <p>From rough cuts to a flawless finish. No shortcuts, just real work.</p>
+        </div>
+        
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-img img-1"></div>
+                <div class="service-content">
                     <h3>Premium Hardwood Stairs</h3>
-                    <p>Custom stair design and installation, transforming your space.</p>
+                    <p>Custom stair design and precision installation. We build solid, squeak-free stairs that transform your space.</p>
                 </div>
-
-                <div class="feature-item" style="position: relative;">
-                    <div class="annotation">
-                        <span class="annotation-text">Mobile First</span>
-                    </div>
-                    <div class="feature-img">Finished Work</div>
-                    <span class="feature-label">Interior Finishing</span>
-                    <h3>Exquisite Trim & Details</h3>
-                    <p>Molding, casing, and paneling, for a flawless high-end finish.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-img img-2"></div>
+                <div class="service-content">
+                    <h3>Exquisite Interior Finishing</h3>
+                    <p>Flawless baseboards, casing, crown molding, and trim work. Every joint is seamless and every line is sharp.</p>
                 </div>
-
-                <div class="feature-item" style="position: relative;">
-                    <div class="annotation">
-                        <span class="annotation-text">SEO-Driven</span>
-                    </div>
-                    <div class="feature-img">Tools & Craft</div>
-                    <span class="feature-label">GTA Service</span>
-                    <h3>Professional GTA Carpentry</h3>
-                    <p>Specialized service across Toronto and surrounding GTA areas.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-img img-3"></div>
+                <div class="service-content">
+                    <h3>Railings & Balusters</h3>
+                    <p>Custom handrails, wood or iron balusters, and newel posts securely installed to elevate your staircase's safety and style.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="container">
-            <h3>Dario Construction</h3>
-            <p>Toronto skyline quality, Burlington local touch.</p>
-            <p>Phone: <a href="tel:647-657-3816">647-657-3816</a> | Call: 647-657-3816</p>
-            <p><a href="#get-a-quote">GET A FREE QUOTE</a></p>
-            
-            <div class="footer-instagram">
-                <p><span class="feature-label">dariocontruction</span> 3 posts | 2,023 followers | 1,244 following</p>
-                <p>Master stair & finish carpentry in the GTA.</p>
-                <p><a href="https://instagram.com/dariocontruction">View on Instagram</a></p>
+            <div class="footer-grid">
+                <div class="contact-info">
+                    <h2>Ready for a sharp finish?</h2>
+                    <p>Message us today for a free consultation. Clean lines, sharp finish, precise to every millimeter.</p>
+                    <p>📍 <strong>Service Area:</strong> Burlington & Greater Toronto Area</p>
+                    <p>📞 <strong>Phone:</strong> <a href="tel:6476573816">647-657-3816</a></p>
+                </div>
+                
+                <div class="ig-box">
+                    <h3>@dariocontruction</h3>
+                    <p>Specializing in hardwood stair installation and interior finishing 🔨</p>
+                    <p>Clean, precise work.</p>
+                    <a href="https://instagram.com/dariocontruction" target="_blank" class="btn" style="margin-top: 15px; width: 100%; padding: 10px;">Follow on IG</a>
+                </div>
             </div>
-            
-            <p style="margin-top: 30px;">Copyright &copy; 2024 Dario Construction. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2026 Dario Construction. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('nav-links');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            if (nav.classList.contains('active')) {
+                btn.innerHTML = '✕'; // Change to close icon
+            } else {
+                btn.innerHTML = '☰'; // Change back to hamburger
+            }
+        });
+    </script>
 </body>
 </html>
